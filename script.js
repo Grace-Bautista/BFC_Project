@@ -1,3 +1,4 @@
+// -------------- PRODUCT DETAIL DISPLAY ------------
 const productBoxes = document.querySelectorAll('.product-box');
 const detailsBoxes = document.querySelectorAll('.details-box');
 const productDetailsContainer = document.querySelector('.product-details');
@@ -30,12 +31,22 @@ productBoxes.forEach(box => {
   });
 });
 
+// Close button inside each details box
+document.querySelectorAll('.close-details').forEach(btn => {
+  btn.addEventListener('click', e => {
+    e.stopPropagation(); // prevent triggering other click events
+    hideAllDetails();
+    productSection.style.width = '100%'; // restore full width
+  });
+});
+
 // Click outside details to hide
 productDetailsContainer.addEventListener('click', e => {
   if (e.target === productDetailsContainer) {
     hideAllDetails();
   }
 });
+
 
 // Cart array to track client-side items
 let cart = [];
@@ -212,4 +223,5 @@ checkoutForm.addEventListener('submit', e => {
     }
   });
 });
+
 
