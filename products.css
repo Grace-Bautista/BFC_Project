@@ -10,24 +10,31 @@ body {
 
 /* Navbar */
 .navbar {
-  background-color: #f4c56a;
+  background-color: #fbd07a;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 10px 40px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  padding: 5px 20px;
 }
 
 .logo img {
-  width: 90px;
-  height: 90px;
+  width: 3rem;
+  height: 3rem;
   border-radius: 50%;
+  padding: 20px;
+}
+.nav-links a {
+  color: #4b2e05;
+  font-size: 20px;
+  text-decoration: none;
+  margin: 0 15px;
+  font-weight: 600;
+  transition: 0.3s;
 }
 
-.nav-links a {
-  text-decoration: none;
-  color: #3a1f04;
-  font-weight: 600;
-  margin: 0 10px;
+.nav-links a:hover {
+  color: #8b5e00;
 }
 
 /* Header */
@@ -54,14 +61,14 @@ body {
 .content-wrapper {
   display: flex;
   gap: 20px; /* space between the columns */
-  padding: 20px;
+  padding: 20px;  
+  max-height: 800px;
 }
 
 .product-grid {
   flex-wrap: wrap;
   width: 100%;
   overflow-y: auto;
-  max-height: 800px;
 }
 
 /* Make product section take ~40% of width */
@@ -377,6 +384,7 @@ footer {
 .checkout-items li {
   margin-bottom: 5px;
 }
+
 
 
 
